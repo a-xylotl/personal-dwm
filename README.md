@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # My dwm (Dynamic Window Manager) build
 
 ![Screenshot of my desktop](https://gitlab.com/dwt1/dotfiles/raw/master/.screenshots/dotfiles04.png) 
@@ -65,3 +66,8 @@ like this in your .xinitrc:
 
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
+=======
+# personal-dwm
+
+yes
+>>>>>>> b78e0899bcbaa5bad57c4fc095b2947f0bbe55fa
