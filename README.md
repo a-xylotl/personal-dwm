@@ -11,23 +11,18 @@ The MODKEY is set to the `Super` key (aka the `Windows` key)
 | :--- | :--- |
 | `MODKEY + P` | opens run launcher (dmenu is the run launcher but can be easily changed) |
 | `MODKEY + Enter` | opens terminal (st is the terminal but can be easily changed) |
-
 | `MODKEY + c` | kills the client |
 | `MODKEY + b` | toggles the top bar |
 | `MODKEY + SHIFT + c` | closes window with focus |
 | `MODKEY + SHIFT + q` | quits dwm |
-
 | `MODKEY + d` | incnmaster -1 |
 | `MODKEY + i` | incnmaster +1 |
-
 | `MODKEY + j` | focus stack +1 (switches focus between windows in the stack) 
 | `MODKEY + k` | focus stack -1 (switches focus between windows in the stack)|
 | `MODKEY + SHIFT + j` | rotate stack +1 (rotates the windows in the stack) |
 | `MODKEY + SHIFT + k` | rotate stack -1 (rotates the windows in the stack) |
-
 | `MODKEY + h` | setmfact -0.05 (decreases window width) |
 | `MODKEY + l` | setmfact +0.05 (increases window width) |
-
 | `MODKEY + ,` | focusmon -1 (switches focus between monitors) |
 | `MODKEY + .` | focusmon +1 (switches focus between monitors) |
 | `MODKEY + SHIFT + ,` | cyclelayout -1 (cycles onto previous layout) |
