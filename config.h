@@ -1,9 +1,22 @@
-/*  ____ _____  */
-/* |  _ \_   _|  Derek Taylor (DistroTube) */
-/* | | | || |  	http://www.youtube.com/c/DistroTube */
-/* | |_| || |  	http://www.gitlab.com/dwt1/ */
-/* |____/ |_|  	*/ 
+/* 			 _____________        [ Original by: ]     					   */
+/*			|EEEEEEEEEEEEE|   								   */
+/*			|O|  _ \_   _||				Derek Taylor (DistroTube)		   */
+/*			|O| | | || |OO|				{					   */
+/*			|O| |_| || |OO|					distrotube (youtube)		   */
+/*			|O|____/O|_|OO|					dwt1 (gitlab)			   */ 
+/*			|DDDDDDDDDDDDD|				}					   */
 
+
+/* 					[ aaxylotl's ThinkPad flip: ]					   */
+/*	   	            ___       ____    _____							   */
+/*        /\          /\    \QQ\     /QQRR\  /RRTTT|		Brian Yang (aaxylotl)			   */
+/*       /OO\        /AA\    \QQ\   /QQ/\RR\/RR/|TT|		{					   */
+/*      /OOOO\      /AAAA\    \QQ\ /QQ/  \RRRR/ |TT|			a-xylotl (github)		   */
+/*     /OO/\OO\    /AA/\AA\    >QQXQQ<    >RR/  |TT|			bbbbb#7777 (discord)		   */
+/*    /OO/  \OO\  /AA/  \AA\  /QQ/ \QQ\  /RR/   |TT|			bymastermm (deviantart)		   */
+/*   /OO/  __\OO\/AA/  __\AA\/QQ/   \QQ\/RR/    |TT|______						   */
+/*  /DD/  |EEEEEEEE/  |BBBBBBBB/     \LLLL/     |ZZZZZZZZZ|     }					   */
+/*													   */
 
 #include "selfrestart.c"
 #include <X11/XF86keysym.h>
@@ -39,7 +52,7 @@ static const unsigned int alphas[][3]      = {
 
 /* tagging */
 /* static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3" };
 
 
 static const Rule rules[] = {
