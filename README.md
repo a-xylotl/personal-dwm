@@ -27,6 +27,7 @@ The MODKEY is set to the `Super` key (aka the `Windows` key)
 | `MODKEY + .` | focusmon +1 (switches focus between monitors) |
 | `MODKEY + SHIFT + ,` | cyclelayout -1 (cycles onto previous layout) |
 | `MODKEY + SHIFT + .` | cyclelayout +1 (cycles onto next layout) |
+| `MODKEY + SHIFT + [number]` | (sends window to specified tag)
 
 # Requirements
 
