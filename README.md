@@ -19,8 +19,10 @@ The MODKEY is set to the `Super` key (aka the `Windows` key)
 | `MODKEY + i` | incnmaster +1 |
 | `MODKEY + j` | focus stack +1 (switches focus between windows in the stack) 
 | `MODKEY + k` | focus stack -1 (switches focus between windows in the stack)|
-| `MODKEY + SHIFT + j` | rotate stack +1 (rotates the windows in the stack) |
-| `MODKEY + SHIFT + k` | rotate stack -1 (rotates the windows in the stack) |
+| `MODKEY + SHIFT + n` | rotates stack +1 (rotates the windows in the stack)|
+| `MODKEY + SHIFT + m` | rotates stack -1 (rotates the windows in the stack)|
+| `MODKEY + SHIFT + j` | move stack +1 (moves the windows in the stack) |
+| `MODKEY + SHIFT + k` | move stack -1 (moves the windows in the stack) |
 | `MODKEY + h` | setmfact -0.05 (decreases window width) |
 | `MODKEY + l` | setmfact +0.05 (increases window width) |
 | `MODKEY + ,` | focusmon -1 (switches focus between monitors) |
