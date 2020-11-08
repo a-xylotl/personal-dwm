@@ -104,6 +104,7 @@ static const char *upvol[]    = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%
 static const char *downvol[]  = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%", NULL };
 static const char *mutevol[]  = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle", NULL };	
 
+#include "movestack.c"
 static Key keys[] = {
 	/* modifier               key              function        argument */
 	{ 0,			  XF86XK_AudioRaiseVolume, spawn,  {.v = upvol } },
@@ -113,6 +114,8 @@ static Key keys[] = {
 	{ MODKEY,                 XK_p, 	   spawn,          {.v = dmenucmd } },
 	{ MODKEY,                 XK_Return,       spawn,          {.v = termcmd } },
 	{ MODKEY,                 XK_b,            togglebar,      {0} },
+	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 }},
+	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 }},
 	{ MODKEY|ShiftMask,       XK_n,            rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,       XK_m,            rotatestack,    {.i = -1 } },
 	{ MODKEY,                 XK_j,            focusstack,     {.i = +1 } },
