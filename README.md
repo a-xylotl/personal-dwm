@@ -74,3 +74,22 @@ like this in your .xinitrc:
 
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
+
+
+# Patches
+
+Here is a list of patches for my build (this repo) of dwm:
+- dwm-alpha - Makes dwm have translucent bars, while keeping text opaque
+- dwm-attachaside - Makes new clients get attached and focused in stacking area instead of becoming the new master
+- dwm-autostart - Adds program autostart functionality when dwm starts up
+- dwm-centeredmaster - Adds two layouts, centeredmaster and centeredfloatingmaster
+- dwm-cyclelayouts - Adds functionality to cycle through all available layouts
+- dwm-fancybar - Shows titles of every visible window instead of just selected one
+- dwm-fibonacci - Adds a layout where windows are arranged in a fibonacci-style layout
+- dwm-gridmode - Adds a layout where windows are arranged in a grid layout
+- dwm-movestack - Adds functionality to move clients around in stack and swap them with the master
+- dwm-pertag - Makes each tag have their own layout, mwfact, barpos and nmaster
+- dwm-selfrestart - Restart dwm without using an external script
+- dwm-rotatestack- Adds functionality to move a client from bottom to top of stack
+- dwm-statuspadding - Adds configurability to horizontal and vertical padding in the status bar
+- dwm-uselessgap - Adds useless gap around windows for aesthetics
