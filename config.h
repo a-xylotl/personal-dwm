@@ -30,8 +30,8 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = 6;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 7;        /* vertical padding for statusbar */
-static const char *fonts[]          = { "FontAwesome:Regular:size=10" };
-static const char dmenufont[]       = "FontAwesome:Regular:size=10";
+static const char *fonts[]          = { "Liberation Mono:pixelsize=10", "JoyPixels:pixelsize=8:antialias=true:autohint=true", "monospace:size=10" };
+static const char dmenufont[]       = "Liberation Mono:pixelsize=10";
 static const char col_gray1[]       = "#0B2542";
 static const char col_gray2[]       = "#111322"; /* border color unfocused windows */
 static const char col_gray3[]       = "#96b5b4";
@@ -101,6 +101,13 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+
+/* commands spawned when clicking statusbar, the mouse button pressed is exported as BUTTO
+ */
+static char *statuscmds[] = { "notify-send Mouse$BUTTON" };
+static char *statuscmd[] = { "/bin/sh", "-c", NULL, NULL };
+
+
 static const char *termcmd[]  = { "st", NULL };
 
 static const char *upvol[]    = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%", NULL };
@@ -145,7 +152,15 @@ static Key keys[] = {
 	{ MODKEY,                 XK_period,       focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,       XK_comma,        tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,       XK_period,       tagmon,         {.i = +1 } },
-	
+
+    	{ MODKEY,                 XK_Print,        spawn,          CMD("deepin-screenshot")  },
+	{ MODKEY|ControlMask,       XK_d,          spawn,          CMD("Discord") },
+	{ MODKEY|ControlMask,       XK_s,          spawn,          CMD("snap run spotify")   },
+	{ MODKEY|ControlMask,       XK_t,          spawn,          CMD("st") },
+	{ MODKEY|ControlMask,       XK_c,          spawn,          CMD("chromium") },
+	{ MODKEY|ControlMask,       XK_g,          spawn,          CMD("gimp") },
+	{ MODKEY|ControlMask,       XK_o,          spawn,          CMD("obs") },
+
     /* Apps Launched with <SUPER> + <KEYPAD 1-9>  */
 	{ MODKEY,                 XK_KP_End,       spawn,          CMD("st -e lynx -cfg=~/.lynx/lynx.cfg -lss=~/.lynx/lynx.lss gopher://distro.tube") },
 	{ MODKEY,                 XK_KP_Down,      spawn,          CMD("st -e sh ./scripts/googler-script.sh") },
@@ -156,7 +171,7 @@ static Key keys[] = {
 	{ MODKEY,                 XK_KP_Home,      spawn,          CMD("st -e sh ./scripts/haxor-news.sh") },
 	{ MODKEY,                 XK_KP_Up,        spawn,          CMD("st -e toot curses") },
 	{ MODKEY,                 XK_KP_Page_Up,   spawn,          CMD("st -e sh ./scripts/tig-script.sh") },
-
+	
 	
     /* Apps Launched with <SUPER> + <SHIFT> + <KEYPAD 1-9>  */
 	{ MODKEY|ShiftMask,       XK_KP_End,       spawn,          CMD("st -e ~/.config/vifm/scripts/vifmrun") },
