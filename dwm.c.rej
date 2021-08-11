@@ -1,18 +1,15 @@
---- dwm.c
-+++ dwm.c
-@@ -193,7 +192,6 @@ static void resizeclient(Client *c, int x, int y, int w, int h);
- static void resizemouse(const Arg *arg);
- static void restack(Monitor *m);
- static void run(void);
--static void runautostart(void);
- static void scan(void);
- static int sendevent(Client *c, Atom proto);
- static void sendmon(Client *c, Monitor *m);
-@@ -2141,7 +2060,6 @@ main(int argc, char *argv[])
- 		die("pledge");
- #endif /* __OpenBSD__ */
- 	scan();
--	runautostart();
- 	run();
- 	cleanup();
- 	XCloseDisplay(dpy);
+--- dwm.c	2020-07-09 16:49:10.023585649 +0200
++++ dwm.c	2020-07-09 16:49:43.497542191 +0200
+@@ -1987,9 +1987,11 @@ updatesizehints(Client *c)
+ void
+ updatestatus(void)
+ {
++	Monitor* m;
+ 	if (!gettextprop(root, XA_WM_NAME, stext, sizeof(stext)))
+ 		strcpy(stext, "dwm-"VERSION);
+-	drawbar(selmon);
++	for(m = mons; m; m = m->next)
++		drawbar(m);
+ }
+ 
+ void

@@ -30,7 +30,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = 6;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 7;        /* vertical padding for statusbar */
-static const char *fonts[]          = { "Liberation Mono:pixelsize=10", "JoyPixels:pixelsize=8:antialias=true:autohint=true", "monospace:size=10" };
+static const char *fonts[]          = { "Liberation Mono:pixelsize=10", "NotoFontsEmoji:pixelsize=8:antialias=true:autohint=true", "monospace:size=10" };
 static const char dmenufont[]       = "Liberation Mono:pixelsize=10";
 static const char col_gray1[]       = "#0B2542";
 static const char col_gray2[]       = "#111322"; /* border color unfocused windows */
